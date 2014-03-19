@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://negativeyouth.net/cas/tb/style.css" />
+  <title>&#9996;TEEHN BWITCHES&#9996;</title>
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+</head>
+
+<body>
+  <header>
+  <div class="header">
+    <div class="wrapper cf">
+      <h1>TEEHN BWITCHES</h1>
+      <nav>
+        <ul class="cf">
+          <li class="home"><a href="/">Home</a></li>
+          <li class="releases"><a href="/releases">Releases</a></li>
+          <li class="about"><a href="/about">About</a></li>
+          <li class="ask"><a href="/ask">Ask</a></li>
+        </ul>
+      </nav>
+      <ul class="social cf">
+        <li class="fb"><a href="https://www.facebook.com/teehnbwitches">facebook</a></li>
+        <li class="tw"><a href="https://twitter.com/teehnbwitches">twitter</a></li>
+        <li class="sc"><a href="https://soundcloud.com/teehnbwitches">soundcloud</a></li>
+      </ul>
+    </div>
+  </div>
+  </header>
+
+  <section>
+  <div class="posts">
+  {block:Posts}
+
+    {block:Text}
+    <article>
+    <div class="post text">
+      <div class="wrapper">
+        {block:Title}
+        <header>
+          <h2>{Title}</h2>
+        </header>
+        {/block:Title}
+        <div class="content">
+          {Body}
+        </div>
+      </div>
+    </div>
+    </article>
+    {/block:Text}
+
+
+    {block:Photo}
+    <article>
+    <div class="post wrapper photo">
+      {block:Caption}
+        <header>
+          <div class="caption">
+            {Caption}
+          </div>
+        </header>
+      {block:Caption}
+      <a href="{Permalink}">
+        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+      </a>
+    </div>
+    </article>
+    {/block:Photo}
+
+    {block:Audio}
+    <article>
+    <div class="post audio">
+      <div class="wrapper">
+        {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+        {block:Caption}
+        <div class="content">
+          {Caption}
+        </div>
+        {/block:Caption}
+      </div>
+    </div>
+    </article>
+    {/block:Audio}
+
+    {block:Quote}
+    <article>
+    <div class="post quote">
+      <div class="wrapper">
+        <header>
+          <h2>"{Quote}"</h2>
+        </header>
+        {block:Source}
+        <div class="content">
+          {Source}
+        </div>
+        {/block:Source}
+      </div>
+    </div>
+    </article>
+    {/block:Quote}
+
+    {block:Link}
+    <article>
+    <div class="post link">
+      <div class="wrapper">
+        <header>
+          <h2><a href="{URL}" class="link" {Target}>{Name}</a></h2>
+        </header>
+        {block:Description}
+        <div class="content">
+          {Description}
+        </div>
+        {/block:Description}
+      </div>
+    </div>
+    </article>
+    {/block:Link}
+
+  {/block:Posts}
+  </div>
+  </section>
+
+  <footer>
+  <div class="footer">
+    {block:PreviousPage}
+      <a href="{PreviousPage}">&#171; Previous</a>
+    {/block:PreviousPage}
+
+    {block:NextPage}
+      <a href="{NextPage}">Next &#187;</a>
+      {/block:NextPage}
+  </div>
+  </footer>
+
+</body>
+
+</html>
+
+
